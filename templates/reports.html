@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Recent ICE Reports</title></head>
+<body>
+  <h1>Reports from the Last 5 Days</h1>
+  <table border="1">
+    <tr><th>City</th><th>Agents</th><th>Detained</th><th>Date</th><th>Distance to UCI (mi)</th></tr>
+    {% for r in reports %}
+    <tr>
+      <td>{{ r.city }}</td>
+      <td>{{ r.count }}</td>
+      <td>{{ r.detained }}</td>
+      <td>{{ r.timestamp }}</td>
+      <td>{{ r.distance }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/">Submit New Report</a>
+</body>
+</html>
