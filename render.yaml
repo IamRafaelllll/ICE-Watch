@@ -1,0 +1,10 @@
+# render.yaml
+services:
+  - type: web
+    name: ice-watch
+    runtime: python
+    buildCommand: ""
+    startCommand: python IWapp.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
